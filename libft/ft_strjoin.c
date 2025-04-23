@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:30:26 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2025/04/11 18:39:08 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2025/04/23 18:37:22 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	char	*str1;
 	size_t	i;
 	size_t	j;
-	
+
 	i = 0;
 	j = 0;
 	if (s1 == NULL)

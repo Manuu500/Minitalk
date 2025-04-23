@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 15:57:21 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2025/04/04 18:32:47 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2025/04/23 18:36:45 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,47 +41,47 @@ void	free_mem(char **str)
 	free(str);
 }
 
-char **split_body(char const *s, char c, char **str)
+char	**split_body(char const *s, char c, char **str)
 {
-    size_t f;
-    size_t j;
-    size_t ctr;
+	size_t	ctr;
+	size_t	f;
+	size_t	j;
 
 	f = 0;
 	j = 0;
-    while (s[f])
-    {
-        while (s[f] == c)
-            f++;
-        ctr = 0;
-        while (s[f + ctr] && s[f + ctr] != c)
-            ctr++;
-        if (ctr > 0)
-        {
-            str[j] = ft_substr(s, f, ctr);
-            if (!str[j])
-                free_mem(str);
-            j++;
-        }
-        f += ctr;
-    }
-    str[j] = NULL;
-    return (str);
+	while (s[f])
+	{
+		while (s[f] == c)
+			f++;
+		ctr = 0;
+		while (s[f + ctr] && s[f + ctr] != c)
+			ctr++;
+		if (ctr > 0)
+		{
+			str[j] = ft_substr(s, f, ctr);
+			if (!str[j])
+				free_mem(str);
+			j++;
+		}
+		f += ctr;
+	}
+	str[j] = NULL;
+	return (str);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    char **str;
-    size_t str_long;
+	char	**str;
+	size_t	str_long;
 
-    if (!s)
-        return (NULL);
-    str_long = word_count(s, c);
-    str = malloc(sizeof(char *) * (str_long + 1));
-    if (!str)
-        return (NULL);
-    str = split_body(s, c, str);
-    if (!str)
-        free_mem(str);
-    return (str);
+	if (!s)
+		return (NULL);
+	str_long = word_count(s, c);
+	str = malloc(sizeof(char *) * (str_long + 1));
+	if (!str)
+		return (NULL);
+	str = split_body(s, c, str);
+	if (!str)
+		free_mem(str);
+	return (str);
 }
