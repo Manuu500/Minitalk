@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 19:35:32 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2025/04/23 18:24:13 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2025/04/24 18:14:02 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,5 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	send_signal(pid, '\0');
-	ft_printf("\n");
 	return (0);
 }
