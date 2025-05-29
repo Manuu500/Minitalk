@@ -6,12 +6,11 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 17:54:16 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/18 14:12:47 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2025/04/25 19:37:47 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {
